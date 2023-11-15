@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+</head>
+<style>
+    .container
+    {
+        width: 40%;
+        margin: auto;
+        margin-top: 150px;
+        background-color: rgb(133, 155, 155);
+        height: 150px;
+        border-radius: 27px;
+    }
+    .input
+    {
+        margin-top: 23px;
+        margin-left: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="firstRow">
+
+    <button class="btn" data-target="q">q</button>
+   <button class="btn" data-target="w">w</button>
+   <button class="btn" data-target="e">e</button>
+   <button class="btn" data-target="r">r</button>
+   <button class="btn" data-target="t">t</button>
+   <button class="btn" data-target="y">y</button>
+   <button class="btn" data-target="u">u</button>
+   <button class="btn" data-target="i">i</button>
+   <button class="btn" data-target="o">o</button>
+   <button class="btn" data-target="p">p</button>
+</div>
+<div class="secondRow">
+   <button class="btn" data-target="a" id="a">a</button>
+   <button class="btn" data-target="s">s</button>
+   <button class="btn" data-target="d" id="d">d</button>
+   <button class="btn" data-target="f">f</button>
+   <button class="btn" data-target="g">g</button>
+   <button class="btn" data-target="h">h</button>
+   <button class="btn" data-target="j">j</button>
+   <button class="btn" data-target="k">k</button>
+   <button class="btn" data-target="l">l</button>
+</div>
+<div class="thirdRow">
+
+   <button class="btn" data-target="z">z</button>
+   <button class="btn" data-target="x">x</button>
+   <button class="btn" data-target="c" id="c">c</button>
+   <button class="btn" data-target="v">v</button>
+   <button class="btn" data-target="b" id="b">b</button>
+   <button class="btn" data-target="n">n</button>
+   <button class="btn" data-target="m">m</button>
+
+</div>
+
+
+
+
+
+
+
+   
+   <input class="input"  type="text">
+</div>
+
+</body>
+<script>
+
+    let input=document.querySelector('.input');
+    input.addEventListener('input',InputFunction);
+    function InputFunction()
+    {
+        // console.log(input.value);
+        let btnClass=document.querySelectorAll('.btn');
+    btnClass.forEach(element => {
+        let BtnData=element.getAttribute('data-target');
+        // console.log(BtnData);
+        if(input.value==BtnData)
+        {
+            element.style.backgroundColor = 'blue';
+        }
+
+    });
+        input.value="";
+    }
+
+  
+
+</script>
+</html>
